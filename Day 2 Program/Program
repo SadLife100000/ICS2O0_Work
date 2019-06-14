@@ -23,6 +23,24 @@ you_won_a_prize()
 
 you_won_a_prize()
 
+#this part is just me trying to figure out the name part
+
 f=open("StudentNames.txt")
 lines=f.readlines()
 print (lines[3])
+
+def letter2():
+  fileQ = "Letter Template2.txt"
+  pfile = open(fileQ, "r")
+  for line in pfile:
+     print (line)
+     print()
+filename = "Student Names.txt"
+xfile = open(filename, "r")
+
+for line in xfile:
+  print (line)
+  f=open("LetterTemplate.txt")
+  lines=f.readlines()
+  print (lines[1])
+
