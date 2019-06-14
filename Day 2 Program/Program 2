@@ -1,0 +1,54 @@
+def Congratulations_letter():
+    rfile = open ("FirstLetter.txt", "w")
+    sfile = open ("SecondLetter.txt", "w")
+    tfile = open ("ThirdLetter.txt", "w")
+    ufile = open ("FourthLetter.txt", "w")
+    vfile = open ("FifthLetter.txt", "w")
+
+    #Added
+    #Created a list to store all the files
+    files_list = [rfile, sfile, tfile, ufile, vfile]
+
+    filename = "LetterTemplate.txt"
+    afile = open (filename,"r")
+    lines = afile.readlines()
+    print (lines[0])
+  
+    # Added and modified
+    # Looping into that list to have every file with the
+    # first line in LetterTemplate.txt
+    for file in files_list:
+        file.write(lines[0])
+    #rfile.write (lines[0])
+  
+    fileP = open ("StudentNames.txt")
+    line = fileP.readlines()
+    print (line[0])
+    # Added and modified
+    # Looping into list to have every file write down
+    # a unique student name from StudentNames.txt
+    for i in range(len(files_list)):
+        files_list[i].write(line[i])
+    #rfile.write(line[0])
+  
+    f = open ("LetterTemplate.txt")
+    lines1 = f.readlines()
+    print (lines1[2])
+    print (lines1[3])
+    print (".....July 7, 2019.....")
+    print() 
+    print (lines1[5])
+    print (lines1[6])
+  
+    # Added and modified
+    # Looping through every file to have every file write
+    # the rest of LetterTemplate.txt
+    for file in files_list:
+        file.write (lines1[2])
+        file.write (lines1[3])
+        file.write (".....July 7,2019.....")
+        file.write (lines1[4])
+        file.write (lines1[5])
+        file.write (lines1[6])
+        file.close()
+        
