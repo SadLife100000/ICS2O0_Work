@@ -1,0 +1,20 @@
+def you_won_a_prize():
+   filename = "LetterTemplate.txt"
+   xfile = open(filename, "r")
+   for line in xfile:
+      print (line)
+      print()
+   if input("Would you like to know the date of this amazing trip?(y/n)") == "y":
+       print()
+       print("The day you will be traveling to the center is July 14, 2103!!")
+       print()
+   else:
+       print()
+       print("Thank you for your time!")
+       print()
+
+you_won_a_prize()
+
+f=open("StudentNames.txt")
+lines=f.readlines()
+print (lines[3])
